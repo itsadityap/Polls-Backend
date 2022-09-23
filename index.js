@@ -14,11 +14,11 @@ app.use('/',createPollRoute)
 const voteRoute = require('./routes/voteRoute');
 app.use('/',voteRoute)
 
-// Get Message
+// Get Message Route
 const getMessageRoute = require('./routes/getMessageRoute');
 app.use('/',getMessageRoute)
 
-// Get Votes
+// Get Votes Route
 const getVotes = require('./routes/getVotesRoute');
 app.use('/', getVotes)
 

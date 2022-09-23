@@ -11,6 +11,7 @@ const pollSchema = new Schema({
                 noOfVotes: Number
             },
         ],
+
     createdDate:{type: Date, default: Date.now},
     expiry:{type:Date}
 })

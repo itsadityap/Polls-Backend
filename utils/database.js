@@ -6,8 +6,8 @@ const connectionOptions = {
     useUnifiedTopology: true,
 };
 
-mongoose.connect(process.env.MONGO_URL, connectionOptions);
-mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGO_URL, connectionOptions)
+mongoose.Promise = global.Promise
 
 module.exports = {
     Polls: require("../models/pollDesign"),
