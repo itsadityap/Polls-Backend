@@ -8,7 +8,7 @@ async function getMessage (req,res) {
     const pollId = req.params.id;
     let poll = await pollModel.findOne({pollId: pollId})
 
-    console.log(poll);
+    //console.log(poll);
 
     const message = [];
     const urls = [];
@@ -17,17 +17,21 @@ async function getMessage (req,res) {
     {
         urls.push("localhost:4000/vote/"+poll.pollId+"/"+i);
     }
-    console.log(urls)
+    //console.log(urls)
 
     for(let i=0;i<poll.pollOptions.length;i++)
     {
         message.push(poll.pollOptions[i].pollOptionAns);
     }
-    console.log(message);
+    //console.log(message);
 
     let response = {
+        pollQ: String,
         responses: []
     }
+
+    response.pollQuestion = poll.pollQues;
+
     for(let i=0;i<message.length;i++)
     {
         response.responses.push({

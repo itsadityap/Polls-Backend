@@ -8,7 +8,7 @@ generateRandomId = () => {
     const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M",
         "N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
-    const randomNo = Math.floor(Math.random()*1000);
+    const randomNo = Math.floor(Math.random()*100000);
 
     const randomStrNo1 = Math.floor(Math.random()*26);
 
@@ -23,14 +23,14 @@ generateRandomId = () => {
 
 async function createPoll (req, res) {
     const pollId = generateRandomId();
-    const pollQues = "what's up";
+    const pollQues = "Who's daddy";
     const pollOptions = [
         {
-            pollOptionAns: "Nigga",
+            pollOptionAns: "Andrew Tate",
             noOfVotes: 0
         },
         {
-            pollOptionAns: "Caucasian",
+            pollOptionAns: "Patrick Bateman",
             noOfVotes: 0
         }];
 

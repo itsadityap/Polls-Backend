@@ -7,10 +7,38 @@ async function getVotes (req, res) {
 
     const pollI = req.params.pid;
     let poll = await pollModel.findOne({pollId: pollI})
-    console.log(poll)
 
+    //console.log(poll)
 
-    res.status(200).send({message:"Successful"})
+    let totalVotes = 0;
+    const voteArray = [];
+
+    for(let i=0;i<poll.pollOptions.length;i++)
+    {
+        totalVotes+=poll.pollOptions[i].noOfVotes;
+        voteArray.push(poll.pollOptions[i].noOfVotes);
+    }
+
+    // console.log(voteArray);
+    // console.log(totalVotes);
+
+    let votes = {
+        votesIndividual: [],
+        totalV: Number,
+    }
+
+    for(let i=0;i<voteArray.length;i++)
+    {
+        votes.votesIndividual.push({
+            'vote':voteArray[i]
+        })
+    }
+
+    votes.totalV = totalVotes;
+
+    // console.log(votes);
+
+    res.status(200).send(votes);
 }
 
 module.exports = {
