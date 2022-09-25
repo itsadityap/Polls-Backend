@@ -22,17 +22,27 @@ generateRandomId = () => {
 }
 
 async function createPoll (req, res) {
+
+    const pollQues = req.query.ques;
+    const pollOptionAnsIndividual = [];
     const pollId = generateRandomId();
-    const pollQues = "Who's daddy";
-    const pollOptions = [
-        {
-            pollOptionAns: "Andrew Tate",
+    
+    for(let i=0;i<req.query.pollOp.length;i++)
+    {
+        pollOptionAnsIndividual.push(req.query.pollOp[i])
+    }
+
+    const pollOptions = [];        
+        
+    for(let i=0;i<req.query.pollOp.length;i++)
+    {
+        let votes = {
+            pollOptionAns: pollOptionAnsIndividual[i],
             noOfVotes: 0
-        },
-        {
-            pollOptionAns: "Patrick Bateman",
-            noOfVotes: 0
-        }];
+        }
+        pollOptions.push(votes);
+    }
+    console.log(pollOptions);
 
     const today = new Date();
 
@@ -48,7 +58,7 @@ async function createPoll (req, res) {
         "createdDate":day,
         "expiry":day
     }
-
+    
     // Mongoose Insert In Schema
     try {
         pollModel.insertMany(defaultItems, function (err){
