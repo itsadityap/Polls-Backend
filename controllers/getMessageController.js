@@ -15,7 +15,7 @@ async function getMessage (req,res) {
 
     for(let i=0;i<poll.pollOptions.length;i++)
     {
-        urls.push("localhost:4000/vote/"+poll.pollId+"/"+i);
+        urls.push("https://whatsapp-polls.herokuapp.com/"+poll.pollId+"/"+i);
     }
     //console.log(urls)
 
