@@ -23,6 +23,7 @@ app.use('/',getMessageRoute)
 
 // Get Votes Route
 const getVotes = require('./routes/getVotesRoute');
+const { default: mongoose } = require("mongoose");
 app.use('/', getVotes)
 
 app.listen(process.env.PORT || 4000)

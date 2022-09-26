@@ -6,7 +6,7 @@ const connectionOptions = {
     useUnifiedTopology: true,
 };
 
-mongoose.connect(process.env.MONGO_URL, connectionOptions)
+mongoose.connect(process.env.MONGO_URL, connectionOptions);
 mongoose.Promise = global.Promise
 
 module.exports = {

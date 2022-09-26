@@ -61,7 +61,7 @@ async function createPoll (req, res) {
     
     // Mongoose Insert In Schema
     try {
-        pollModel.insertMany(defaultItems, function (err){
+        await pollModel.insertMany(defaultItems, function (err){
             if(err)
             {
                 console.log(err);
