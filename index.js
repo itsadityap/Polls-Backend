@@ -26,6 +26,10 @@ const getVotes = require('./routes/getVotesRoute');
 const { default: mongoose } = require("mongoose");
 app.use('/', getVotes)
 
+app.get('/',(req,res)=>{
+    res.send("Lmaoooo");
+})
+
 app.listen(process.env.PORT || 4000)
 {
     console.log("Server is running on the port 4000")

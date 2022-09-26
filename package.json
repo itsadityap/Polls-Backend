@@ -4,7 +4,8 @@
   "description": "Polling On Whatsapp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm app.js"
   },
   "author": "Aditya Pandey",
   "license": "ISC",
