@@ -77,7 +77,7 @@ async function createPoll (req, res) {
         console.log(err);
     }
 
-    res.status(200).send({message:"Successful"})
+    res.status(200).send({message:"Successful",id:pollId})
 }
 
 module.exports = {
