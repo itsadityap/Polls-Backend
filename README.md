@@ -11,7 +11,7 @@ A Node.js Application for Polls on WhatsApp
 
 * ```/getMessage```
         
-    Fetch Relevant Data to display data in a meaning way for the frontend.
+    Fetch Relevant Data to display data in a meaningful way for the frontend.
 
 
 * ```/getVotes/{pollID}```
