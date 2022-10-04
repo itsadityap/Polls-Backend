@@ -8,12 +8,13 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.json());
-
 app.use(cors({
-    origin: '*',
+    'Access-Control-Allow-Origin': '*',
+    origin:'*',
+    'origin':'*'
 }))
     
+app.use(express.json());
 
 // Create Poll Route
 const createPollRoute = require('./routes/createPollRoute')
