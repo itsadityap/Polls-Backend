@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const voteControl = require('../controllers/voteController')
 
-router.post("/vote/:pollID/:optionID", voteOptions);
+router.get("/vote/:pollID/:optionID", voteOptions);
 
 function voteOptions(req, res) {
     voteControl.vote(req,res)
