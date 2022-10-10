@@ -1,6 +1,6 @@
 {
   "name": "polls",
-  "version": "1.5.1",
+  "version": "2.0.1",
   "description": "Polling On Whatsapp",
   "main": "index.js",
   "scripts": {
@@ -13,10 +13,13 @@
     "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
+    "cross-domain-storage": "^2.0.7",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "localStorage": "^1.0.4",
     "lodash": "^4.17.21",
     "mongoose": "^6.6.1",
+    "node-localstorage": "^2.2.1",
     "nodemon": "^2.0.20",
     "styled-components": "^5.3.5"
   },
